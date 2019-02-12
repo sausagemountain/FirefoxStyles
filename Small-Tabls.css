@@ -1,0 +1,23 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.tabbrowser-tab .tab-close-button {
+  margin-left: -2px !important;
+  margin-right: 2px !important;
+  -moz-box-ordinal-group: 0 !important;
+  border-radius: 50% !important;
+}
+
+.tab-label-container:not([selected]) {
+  visibility: collapse !important;
+}
+
+.tabbrowser-tab:not([selected]),
+#tabbrowser-tabs[movingtab] .tabbrowser-tab[selected] {
+  max-width: 0px !important;
+  min-width: 0px !important;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-icon-image:not([src]) {
+    display: inline !important;
+    list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.svg") !important;
+}

@@ -1,0 +1,37 @@
+@import url(./Modern-scrollbars.css);
+@import url(./Bookmarks-On-New-Tab.css);
+@import url(./Colors.css);
+@import url(./One-Line-UI.css);
+@import url(./Small-Tabls.css);
+
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+
+/* Remove empty space before first tab
+Delete this rule if you need a space to drag the window*/
+#TabsToolbar .titlebar-spacer {
+  width: 30px !important;
+  border: 0 transparent !important;
+}
+
+.tabbrowser-tab[selected] {
+  background-color: var(--chrome-background-color) !important;
+}
+
+.toolbarbutton-1,
+.urlbar-icon,
+.tabbrowser-tab[selected] .tab-close-button ,
+.tabbrowser-tab[selected] .tab-icon-image {
+  fill: var(--chrome-secondary-background-color) !important;
+  color: var(--chrome-secondary-background-color) !important;
+}
+
+.tabs-newtab-button,
+.titlebar-button,
+.tabbrowser-tab:not([selected]) .tab-close-button,
+.tabbrowser-tab:not([selected]) .tab-icon-image {
+  fill: var(--chrome-color) !important;
+  color: var(--chrome-color) !important;
+}

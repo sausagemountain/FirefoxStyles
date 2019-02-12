@@ -1,0 +1,23 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+#main-window #PersonalToolbar {
+    margin-top: 4px !important;
+    visibility: collapse !important;
+    background: inherit !important;
+}
+#main-window[title^="about:"] #PersonalToolbar,
+#main-window[title^="New Tab"] #PersonalToolbar,
+#main-window[title^="Nightly"] #PersonalToolbar,
+#main-window[title^="Mozilla Firefox"] #PersonalToolbar,
+#main-window[title^="Firefox Developer Edition"] #PersonalToolbar {
+	visibility: visible !important;
+}
+
+#PersonalToolbar *.toolbarbutton-icon {
+    fill: var(--chrome-color, -moz-win-accentcolortext) !important;
+}
+
+#PersonalToolbar *.toolbarbutton-text {
+    color: var(--chrome-color, -moz-win-accentcolortext) !important;
+}

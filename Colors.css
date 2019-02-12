@@ -1,0 +1,33 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+:root:-moz-lwtheme-brighttext {                                      /* minor color changes to the default dark theme */
+  --color-overflow: #fff !important;                                            /* >> button color */
+  --chrome-background-color: #444 !important;                        /* tab strip background & inactive tabs */
+  --chrome-secondary-background-color: #ddd !important;              /* nav bar & active tab */
+  --chrome-color: #eee !important;                                   /* url & tab text, close tab & new tab buttons */
+  background-color: var(--chrome-background-color) !important;                                 /* top border of out of focus window */
+}
+
+:root:-moz-window-inactive:not(:moz-lwtheme-brighttext) {
+  background-color: rgb(240, 240, 240) !important;
+}
+
+:root:-moz-lwtheme-darktext {                                        /* minor changes to the default light theme */
+  --color-overflow: #111 !important;                                            /* >> button color */
+  --chrome-color: #222 !important;
+  --chrome-background-color: #fff !important;                        /* tab strip background & inactive tabs */
+  background-color: var(--chrome-background-color) !important;
+  --chrome-secondary-background-color: #333 !important;
+}
+
+:root {
+  --tabs-border: transparent !important;                             /* active tab left & right borders - not working in 58?*/
+  --toolbox-border-bottom-color: transparent !important;             /* 1px line under background tabs */
+  --chrome-nav-bar-controls-border-color: transparent !important;    /* border around url bar */
+  --color-overflow: -moz-win-accentcolortext !important;
+  --chrome-color: -moz-win-accentcolortext !important;
+  --chrome-background-color: -moz-win-accentcolor !important;
+  background-color: var(--chrome-background-color) !important;
+  --chrome-secondary-background-color: -moz-win-accentcolor !important;
+}
