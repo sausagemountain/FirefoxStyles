@@ -257,12 +257,6 @@
     transform: scale(1, 0.6);
 }
 
-/* New tab button color */
-#new-tab-button,
-.tabs-newtab-button {
-    fill: var(--chrome-color) !important;
-}
-
 .tabbrowser-tab:not([pinned="true"]) .tab-close-button {
     display: -moz-box !important;
 }
