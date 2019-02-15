@@ -16,6 +16,8 @@
 }
 
 .tabs-newtab-button,
+#new-tab-button,
+#alltabs-button,
 .titlebar-button,
 .tabbrowser-tab:not([selected]) .tab-close-button,
 .tabbrowser-tab:not([selected]) .tab-icon-image {
