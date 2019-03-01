@@ -28,10 +28,6 @@
     border-inline-end: none !important;
 }
 
-#nav-bar {
-    border-bottom-right-radius: 14px !important;
-}
-
 #navigator-toolbox #nav-bar {
     margin-bottom: -1px !important; /* remove navbar bottom 1px border */
     margin-top: -32px !important;
@@ -154,18 +150,15 @@
     -moz-appearance: initial !important;
 }
 
-.toolbarbutton-icon,
-.toolbarbutton-badge-stack,
-.tab-close-button {
-    border-radius: 35% !important;
-    border-radius: 0 !important;
+
+.toolbarbutton-1 {
+    border-radius: 30% !important;
 }
 
 #identity-box,
 .urlbar-icon,
 #star-button-box {
-    /*border-radius: 10px;*/
-    border-radius: 0;
+    border-radius: 4px;
     max-height: 28px;
     margin-top: 2px;
 }
@@ -227,7 +220,6 @@
 #appMenu-popup {
     margin-right: -258px !important;
 }
-
 #appMenu-popup .panel-arrow {
     margin-right: 248px !important;
 }
@@ -239,15 +231,6 @@
 
 #stop-reload-button {
     transform: scale(1, 1) !important;
-}
-
-.tabbrowser-tab:not([selected="true"]) {
-    background: transparent !important;
-    border: none !important;
-}
-
-.tab-background {
-    background-image: none !important;
 }
 
 /* Border between background tabs */
@@ -326,6 +309,7 @@ menupopup menuseparator {
 
 .tab-line {
     background-color: transparent !important;
+    color: transparent !important;
     visibility: collapse !important;
     display: none !important;
 }

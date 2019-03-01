@@ -8,10 +8,17 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
+/* rounded corner */
+#nav-bar {
+    border-bottom-right-radius: 14px !important;
+}
 
-/* Remove empty space before first tab
-Delete this rule if you need a space to drag the window*/
-#TabsToolbar .titlebar-spacer {
-  width: 30px !important;
+/* shrink drag spaces */
+#TabsToolbar .titlebar-spacer[type='pre-tabs'] {
+  width: 35px !important;
+  border: 0 transparent !important;
+}
+#TabsToolbar .titlebar-spacer[type='post-tabs'] {
+  width: 20px !important;
   border: 0 transparent !important;
 }

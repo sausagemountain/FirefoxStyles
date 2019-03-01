@@ -2,7 +2,7 @@
 
 
 #main-window #PersonalToolbar {
-    margin-top: 4px !important;
+    margin-top: 5px !important;
     visibility: collapse !important;
     background: inherit !important;
 }
@@ -12,12 +12,4 @@
 #main-window[title^="Mozilla Firefox"] #PersonalToolbar,
 #main-window[title^="Firefox Developer Edition"] #PersonalToolbar {
 	visibility: visible !important;
-}
-
-#PersonalToolbar *.toolbarbutton-icon {
-    fill: var(--chrome-color, -moz-win-accentcolortext) !important;
-}
-
-#PersonalToolbar *.toolbarbutton-text {
-    color: var(--chrome-color, -moz-win-accentcolortext) !important;
 }

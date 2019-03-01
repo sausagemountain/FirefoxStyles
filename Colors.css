@@ -1,28 +1,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
-:root:-moz-lwtheme-brighttext {
-  /*dark theme */
-  --color-overflow: #fff !important;
-  --chrome-secondary-background-color: #ddd !important;
-  --chrome-color: #eee !important;
-  --chrome-background-color: #444 !important;
-  background-color: var(--chrome-background-color) !important;
-}
-
-:root:-moz-window-inactive:not(:moz-lwtheme-brighttext) {
-  background-color: rgb(240, 240, 240) !important;
-}
-
-:root:-moz-lwtheme-darktext {
-  /*light theme */
-  --color-overflow: #111 !important;
-  --chrome-color: #222 !important;
-  --chrome-secondary-background-color: #333 !important;
-  --chrome-background-color: #fff !important;
-  background-color: var(--chrome-background-color) !important;
-}
-
 :root {
   /* default theme */
   --tabs-border: transparent !important;
@@ -34,4 +12,35 @@
   --chrome-secondary-background-color: -moz-win-accentcolor !important;
   --chrome-background-color: -moz-win-accentcolor !important;
   background-color: var(--chrome-background-color) !important;
+  border-color: var(--chrome-background-color) !important;
+}
+
+:root:-moz-lwtheme-brighttext {
+  /*dark theme */
+  --tabs-border: #ccc !important;
+  --color-overflow: #fff !important;
+  --chrome-secondary-background-color: #ddd !important;
+  --chrome-color: #eee !important;
+  --chrome-background-color: #444 !important;
+  background-color: var(--chrome-background-color) !important;
+}
+
+:root:-moz-lwtheme-darktext {
+  /*light theme */
+  --tabs-border: #222 !important;
+  --color-overflow: #111 !important;
+  --chrome-color: #222 !important;
+  --chrome-secondary-background-color: #333 !important;
+  --chrome-background-color: #fff !important;
+  background-color: var(--chrome-background-color) !important;
+}
+
+:root:not(:-moz-lwtheme-brighttext):-moz-window-inactive {
+  --color-overflow: -moz-win-accentcolor !important;
+  --chrome-color: -moz-win-accentcolor !important;
+  --chrome-background-color: -moz-win-accentcolortext !important;
+}
+
+:root:-moz-window-inactive:not(:moz-lwtheme-brighttext) {
+  background-color: rgb(240, 240, 240) !important;
 }
