@@ -3,17 +3,12 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
-#pageActionSeparator {
-	display: none !important;
-	visibility: collapse !important;
-}
-
 .tabbrowser-tab[selected] {
 	background-color: var(--chrome-background-color) !important;
 }
 
-.toolbarbutton-1,
 #nav-bar-overflow-button,
+#nav-bar *.toolbarbutton-1,
 .urlbar-icon,
 .tabbrowser-tab[selected] .tab-close-button ,
 .tabbrowser-tab[selected] .tab-icon-image {
@@ -22,13 +17,15 @@
 }
 
 .tabbrowser-tab::after,
+#titlebar *.toolbarbutton-1,
 .tabs-newtab-button,
 #PersonalToolbar *.toolbarbutton-text,
 #PersonalToolbar *.toolbarbutton-icon,
 #new-tab-button,
 #alltabs-button,
 .titlebar-button,
-.toolbarbutton-icon,
+.scrollbutton-up,
+.scrollbutton-down,
 .tabbrowser-tab:not([selected]) .tab-close-button,
 .tabbrowser-tab:not([selected]) .tab-icon-image {
 	fill: var(--chrome-color) !important;

@@ -8,6 +8,11 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
+#pageActionSeparator {
+	display: none !important;
+	visibility: collapse !important;
+}
+
 /* rounded corner */
 #nav-bar {
 	border-bottom-right-radius: 14px !important;

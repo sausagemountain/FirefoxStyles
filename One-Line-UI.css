@@ -154,7 +154,6 @@ Taken from here https://gitlab.com/markonius/my-cool-userchrome from [this](http
 /* Move hamburger menu to the left */
 #navigator-toolbox #PanelUI-button {
 	-moz-box-ordinal-group: 0 !important;
-	background: transparent !important;
 	margin-right: 2px;
 	transition: all 350ms var(--animation-easing-function) !important;
 	transition-delay: 0.5s !important;
