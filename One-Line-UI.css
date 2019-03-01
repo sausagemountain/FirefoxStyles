@@ -1,320 +1,288 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+/*
+Taken from here https://gitlab.com/markonius/my-cool-userchrome from [this](https://www.reddit.com/r/FirefoxCSS/comments/actlcp/finally_ironed_out_all_the_bugs_with_my_oneliner/) post by [u/MackThax](https://www.reddit.com/user/MackThax)
+*/
+
 
 * {
-    font-family: "Ubuntu Light", tahoma, arial, helvetica, sans-serif;
-    font-weight: lighter;
+	font-family: "Ubuntu Light", tahoma, arial, helvetica, sans-serif;
+	font-weight: lighter;
 }
 
 #TabsToolbar .tabbrowser-tab * {
-    transition: all 350ms var(--animation-easing-function) !important;
+	transition: all 350ms var(--animation-easing-function) !important;
 }
 
 #navigator-toolbox #TabsToolbar #tabbrowser-tabs {
-    transition: none !important;
+	transition: none !important;
 }
 
 /* Move Tab-bar beside Nav-bar */
 #TabsToolbar {
-    margin-bottom: 0px !important; /* not needed anymore? */
-    margin-top: 0px !important; /*  */
-    margin-left: 35vw !important;
-    margin-right: -34px !important;
-    max-height: 32px !important;
+	margin-bottom: 0px !important; /* not needed anymore? */
+	margin-top: 0px !important; /*  */
+	margin-left: 35vw !important;
+	margin-right: -34px !important;
+	max-height: 32px !important;
 }
 
 
 .tabbrowser-tab[last-visible-tab] {
-    border-inline-end: none !important;
+	border-inline-end: none !important;
 }
 
 #navigator-toolbox #nav-bar {
-    margin-bottom: -1px !important; /* remove navbar bottom 1px border */
-    margin-top: -32px !important;
-    margin-right: 65vw !important;
-    border-top: none !important;
-    z-index: 1000 !important;
-    box-shadow: none !important;
-    transition: all 350ms var(--animation-easing-function) !important;
-    transition-delay: 0.5s !important;
-    margin-left: -48px;
+	margin-bottom: -1px !important; /* remove navbar bottom 1px border */
+	margin-top: -32px !important;
+	margin-right: 65vw !important;
+	border-top: none !important;
+	z-index: 1000 !important;
+	box-shadow: none !important;
+	transition: all 350ms var(--animation-easing-function) !important;
+	transition-delay: 0.5s !important;
+	margin-left: -48px;
 }
 
 #navigator-toolbox #nav-bar:hover {
-    margin-right: 25vw !important;
-    transition: all 350ms var(--animation-easing-function) !important;
-    transition-delay: 0.1s !important;
-    margin-left: 0;
+	margin-right: 25vw !important;
+	transition: all 350ms var(--animation-easing-function) !important;
+	transition-delay: 0.1s !important;
+	margin-left: 0;
 }
 
 :root:not([customizing]) #navigator-toolbox #nav-bar:focus-within {
-    margin-right: 25vw !important;
-    transition: all 350ms var(--animation-easing-function) !important;
-    transition-delay: 0.1s !important;
-    margin-left: 0;
+	margin-right: 25vw !important;
+	transition: all 350ms var(--animation-easing-function) !important;
+	transition-delay: 0.1s !important;
+	margin-left: 0;
 }
 
 #nav-bar-customization-target {
-    /*margin-left: -48px !important;*/
-    transition: all 350ms var(--animation-easing-function) !important;
-    transition-delay: 0.5s !important;
+	/*margin-left: -48px !important;*/
+	transition: all 350ms var(--animation-easing-function) !important;
+	transition-delay: 0.5s !important;
 }
 
 #urlbar {
-    background-color: transparent !important; /* Transparent URL Bar */
-    border-style: none !important;
-    margin-bottom: 0 !important;
-    margin-top: 0 !important;
-    min-height: 32px !important;
-    padding-top: 1px !important;
+	background-color: transparent !important; /* Transparent URL Bar */
+	border-style: none !important;
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+	min-height: 32px !important;
+	padding-top: 1px !important;
 }
 
 :root:not([customizing]) #nav-bar toolbarbutton,
 :root:not([customizing]) #nav-bar #star-button-box {
-    margin-left: -28px !important;
-    opacity: 0 !important;
-    transform: scale(0, 1) !important;
-    pointer-events: none !important;
-    transition: all 350ms var(--animation-easing-function) !important;
-    transition-delay: 0.5s !important;
+	margin-left: -28px !important;
+	opacity: 0 !important;
+	transform: scale(0, 1) !important;
+	pointer-events: none !important;
+	transition: all 350ms var(--animation-easing-function) !important;
+	transition-delay: 0.5s !important;
 }
 
 :root:not([customizing]) #nav-bar #customizationui-widget-panel toolbarbutton {
-    margin-left: unset !important;
-    opacity: unset !important;
-    transform: unset !important;
-    pointer-events: unset !important;
-    transition: unset !important;
-    transition-delay: unset !important;
+	margin-left: unset !important;
+	opacity: unset !important;
+	transform: unset !important;
+	pointer-events: unset !important;
+	transition: unset !important;
+	transition-delay: unset !important;
 }
 
 :root:not([customizing]) #nav-bar #nav-bar-overflow-button {
-    margin-left: unset !important;
-    margin-left: 58px !important;
-    margin-right: -84px !important;
+	margin-left: unset !important;
+	margin-left: 58px !important;
+	margin-right: -84px !important;
 }
 #navigator-toolbox > #nav-bar:hover #nav-bar-overflow-button,
-:root:not([customizing])
-    #navigator-toolbox:focus-within
-    #nav-bar
-    #nav-bar-overflow-button,
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar #nav-bar-overflow-button,
 :root:not([customizing]) :hover > #titlebar #nav-bar-overflow-button {
-    margin-right: 0 !important;
+	margin-right: 0 !important;
 }
 
 :root:not([customizing]) #nav-bar #back-button[disabled="true"],
 :root:not([customizing]) #nav-bar #forward-button[disabled="true"] {
-    display: none;
+	display: none;
 }
 
 #navigator-toolbox > #nav-bar:hover #nav-bar-customization-target,
-:root:not([customizing])
-    #navigator-toolbox:focus-within
-    #nav-bar
-    #nav-bar-customization-target,
-:root:not([customizing])
-    :hover
-    > #titlebar
-    #nav-bar
-    #nav-bar-customization-target {
-    margin-left: 0 !important;
-    transition: all 350ms var(--animation-easing-function) !important;
-    transition-delay: 0.1s !important;
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar #nav-bar-customization-target,
+:root:not([customizing]) :hover > #titlebar #nav-bar #nav-bar-customization-target {
+	margin-left: 0 !important;
+	transition: all 350ms var(--animation-easing-function) !important;
+	transition-delay: 0.1s !important;
 }
 
 #navigator-toolbox > #nav-bar:hover toolbarbutton,
 #navigator-toolbox > #nav-bar:hover #nav-bar-overflow-button,
 #navigator-toolbox > #nav-bar:hover #star-button-box,
 :root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton,
-:root:not([customizing])
-    #navigator-toolbox:focus-within
-    #nav-bar
-    #nav-bar-overflow-button,
-:root:not([customizing])
-    #navigator-toolbox:focus-within
-    #nav-bar
-    #star-button-box,
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar #nav-bar-overflow-button,
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar #star-button-box,
 :root:not([customizing]) :hover > #titlebar toolbarbutton,
 :root:not([customizing]) :hover > #titlebar #nav-bar-overflow-button,
 :root:not([customizing]) :hover > #titlebar #star-button-box {
-    transform: scale(1, 1) !important;
-    opacity: 1 !important;
-    margin-left: 0px !important;
-    pointer-events: auto !important;
-    transition: all 350ms var(--animation-easing-function) !important;
-    transition-delay: 0.1s !important;
+	transform: scale(1, 1) !important;
+	opacity: 1 !important;
+	margin-left: 0px !important;
+	pointer-events: auto !important;
+	transition: all 350ms var(--animation-easing-function) !important;
+	transition-delay: 0.1s !important;
 }
 
 /* Remove padding above tabbar in compact mode */
 #main-window[sizemode="normal"] > #titlebar {
-    -moz-appearance: initial !important;
+	-moz-appearance: initial !important;
 }
 
 
 .toolbarbutton-1 {
-    border-radius: 30% !important;
+	border-radius: 30% !important;
 }
 
 #identity-box,
 .urlbar-icon,
 #star-button-box {
-    border-radius: 4px;
-    max-height: 28px;
-    margin-top: 2px;
+	border-radius: 4px;
+	max-height: 28px;
+	margin-top: 2px;
 }
 
 /* Move hamburger menu to the left */
 #navigator-toolbox #PanelUI-button {
-    -moz-box-ordinal-group: 0 !important;
-    background: transparent !important;
-    margin-right: 2px;
-    transition: all 350ms var(--animation-easing-function) !important;
-    transition-delay: 0.5s !important;
+	-moz-box-ordinal-group: 0 !important;
+	background: transparent !important;
+	margin-right: 2px;
+	transition: all 350ms var(--animation-easing-function) !important;
+	transition-delay: 0.5s !important;
 }
 
-:root:not([customizing])
-    #navigator-toolbox
-    > #nav-bar
-    #PanelUI-button
-    toolbarbutton {
-    margin-left: 48px !important;
-    margin-right: -44px !important;
-    transform: scale(0, 1) !important;
+:root:not([customizing]) #navigator-toolbox > #nav-bar #PanelUI-button
+	toolbarbutton {
+	margin-left: 48px !important;
+	margin-right: -44px !important;
+	transform: scale(0, 1) !important;
 }
 
-:root:not([customizing])
-    #navigator-toolbox
-    > #nav-bar:hover
-    #PanelUI-button
-    toolbarbutton,
-:root:not([customizing])
-    #navigator-toolbox:focus-within
-    #nav-bar
-    #PanelUI-button
-    toolbarbutton {
-    margin-left: 4px !important;
-    transform: scale(1, 1) !important;
-    opacity: 1 !important;
-    margin-right: 4px !important;
+:root:not([customizing]) #navigator-toolbox > #nav-bar:hover #PanelUI-button toolbarbutton,
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar #PanelUI-button toolbarbutton {
+	margin-left: 4px !important;
+	transform: scale(1, 1) !important;
+	opacity: 1 !important;
+	margin-right: 4px !important;
 }
 
 #navigator-toolbox > #nav-bar:hover #PanelUI-button,
-:root:not([customizing])
-    #navigator-toolbox:focus-within
-    #nav-bar
-    #PanelUI-button {
-    margin-right: 8px;
-    transition: all 350ms var(--animation-easing-function) !important;
-    transition-delay: 0.1s !important;
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar #PanelUI-button {
+	margin-right: 8px;
+	transition: all 350ms var(--animation-easing-function) !important;
+	transition-delay: 0.1s !important;
 }
 
 /*:root:not([customizing]) #navigator-toolbox > #nav-bar > #PanelUI-button > toolbarbutton,*/
 #customization-panel-container,
 #customization-panelWrapper .panel-arrow {
-    margin-right: 4px !important;
-    margin-left: 4px !important;
-    /*opacity: 1 !important;*/
-    transform: scale(1, 1) !important;
+	margin-right: 4px !important;
+	margin-left: 4px !important;
+	/*opacity: 1 !important;*/
+	transform: scale(1, 1) !important;
 }
 
 #appMenu-popup {
-    margin-right: -258px !important;
+	margin-right: -258px !important;
 }
 #appMenu-popup .panel-arrow {
-    margin-right: 248px !important;
+	margin-right: 248px !important;
 }
 
 /* More tools... button */
 #nav-bar-overflow-button {
-    transform: scale(0.9, 0.9) !important;
+	transform: scale(0.9, 0.9) !important;
 }
 
 #stop-reload-button {
-    transform: scale(1, 1) !important;
+	transform: scale(1, 1) !important;
 }
 
 /* Border between background tabs */
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
-    opacity: 0.2 !important;
-    transform: scale(1, 0.6);
+	opacity: 0.2 !important;
+	transform: scale(1, 0.6);
 }
 
 .tabbrowser-tab:not([pinned="true"]) .tab-close-button {
-    display: -moz-box !important;
+	display: -moz-box !important;
 }
 
 /* Hide various elements */
-/* Menu */
-
-/* URL Bar */
-/* #pageActionButton, */
 #pocket-button-box,
 ar-button,
 .autocomplete-history-dropmarker,
 #identity-icon-labels {
-    display: none !important;
+	display: none !important;
 }
-
-/* Makes popups, menus and context menus dark */
 
 .panel-arrowcontent,
 #alltabs-popup .arrowscrollbox-scrollbox,
 menupopup:not(#BMB_bookmarksPopup),
 .textbox-contextmenu {
-    border: none !important;
+	border: none !important;
 }
 
 /* bookmarks menu is different from others */
 #BMB_bookmarksPopup {
-    background-color: unset !important;
+	background-color: unset !important;
 }
 
 /* GENERAL */
 menupopup,
 menuitem,
 menu {
-    -moz-appearance: none !important;
+	-moz-appearance: none !important;
 }
 
 menupopup {
-    border: none;
+	border: none;
 }
 
 menuitem,
 menu {
-    min-height: 24px !important;
+	min-height: 24px !important;
 }
 
 menuitem[disabled="true"]:hover,
 menu[disabled="true"]:hover {
-    background-color: transparent !important;
+	background-color: transparent !important;
 }
 
 menupopup menuseparator {
-    -moz-appearance: none !important;
-    border: none !important;
-    min-height: 1px !important;
-    max-height: 1px !important;
-    height: 1px !important;
-    margin: 3px 6px 3px 28px !important;
+	-moz-appearance: none !important;
+	border: none !important;
+	min-height: 1px !important;
+	max-height: 1px !important;
+	height: 1px !important;
+	margin: 3px 6px 3px 28px !important;
 }
 
 .menu-right {
-    filter: invert(100%);
+	filter: invert(100%);
 }
 #context-navigation {
-    background-color: transparent !important;
+	background-color: transparent !important;
 }
 
 .tab-line {
-    background-color: transparent !important;
-    color: transparent !important;
-    visibility: collapse !important;
-    display: none !important;
+	background-color: transparent !important;
+	color: transparent !important;
+	visibility: collapse !important;
+	display: none !important;
 }
 
 #alltabs-popup,
 #alltabs_containersMenuTab {
-    border: none !important;
+	border: none !important;
 }

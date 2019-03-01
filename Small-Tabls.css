@@ -2,31 +2,31 @@
 
 /* close tab button only on active tab */
 /* .tabbrowser-tab[fadein]:not([selected]) .tab-close-button {
-  visibility:collapse !important;
-  display: none !important;
+	visibility:collapse !important;
+	display: none !important;
 } */
 
 /* close tab button on the left */
 .tabbrowser-tab[fadein] .tab-close-button {
-  margin-left: -2px !important;
-  margin-right: 2px !important;
-  -moz-box-ordinal-group: 0 !important;
-  border-radius: 50% !important;
+	margin-left: -2px !important;
+	margin-right: 2px !important;
+	-moz-box-ordinal-group: 0 !important;
+	border-radius: 50% !important;
 }
 
 /* shrink unselected tabs */
 .tabbrowser-tab[fadein] .tab-label-container:not([selected]) {
-  display: none !important;
-  visibility: collapse !important;
+	display: none !important;
+	visibility: collapse !important;
 }
 .tabbrowser-tab[fadein]:not([selected]),
 #tabbrowser-tabs[movingtab] .tabbrowser-tab[selected] {
-  max-width: 0px !important;
-  min-width: 0px !important;
+	max-width: 0px !important;
+	min-width: 0px !important;
 }
 
 /* add favicons */
 .tabbrowser-tab:not([pinned]) .tab-icon-image:not([src]) {
-    display: inline !important;
-    list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.svg") !important;
+		display: inline !important;
+		list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.svg") !important;
 }

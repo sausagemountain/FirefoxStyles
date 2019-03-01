@@ -10,15 +10,15 @@
 
 /* rounded corner */
 #nav-bar {
-    border-bottom-right-radius: 14px !important;
+	border-bottom-right-radius: 14px !important;
 }
 
 /* shrink drag spaces */
 #TabsToolbar .titlebar-spacer[type='pre-tabs'] {
-  width: 35px !important;
-  border: 0 transparent !important;
+	width: 35px !important;
+	border: 0 transparent !important;
 }
 #TabsToolbar .titlebar-spacer[type='post-tabs'] {
-  width: 20px !important;
-  border: 0 transparent !important;
+	width: 20px !important;
+	border: 0 transparent !important;
 }

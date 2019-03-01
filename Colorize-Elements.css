@@ -4,12 +4,12 @@
 
 
 #pageActionSeparator {
-  display: none !important;
-  visibility: collapse !important;
+	display: none !important;
+	visibility: collapse !important;
 }
 
 .tabbrowser-tab[selected] {
-  background-color: var(--chrome-background-color) !important;
+	background-color: var(--chrome-background-color) !important;
 }
 
 .toolbarbutton-1,
@@ -17,8 +17,8 @@
 .urlbar-icon,
 .tabbrowser-tab[selected] .tab-close-button ,
 .tabbrowser-tab[selected] .tab-icon-image {
-  fill: var(--chrome-secondary-background-color) !important;
-  color: var(--chrome-secondary-background-color) !important;
+	fill: var(--chrome-secondary-background-color) !important;
+	color: var(--chrome-secondary-background-color) !important;
 }
 
 .tabbrowser-tab::after,
@@ -31,6 +31,6 @@
 .toolbarbutton-icon,
 .tabbrowser-tab:not([selected]) .tab-close-button,
 .tabbrowser-tab:not([selected]) .tab-icon-image {
-  fill: var(--chrome-color) !important;
-  color: var(--chrome-color) !important;
+	fill: var(--chrome-color) !important;
+	color: var(--chrome-color) !important;
 }
