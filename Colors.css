@@ -1,7 +1,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
-:root {
+#main-window:root {
 	/* default theme */
 	--tabs-border: transparent !important;
 	--toolbox-border-bottom-color: transparent !important;
@@ -15,7 +15,7 @@
 	border-color: var(--chrome-background-color) !important;
 }
 
-:root:-moz-lwtheme-brighttext {
+#main-window:root:-moz-lwtheme-brighttext {
 	/*dark theme */
 	--tabs-border: #ccc !important;
 	--color-overflow: #fff !important;
@@ -25,7 +25,7 @@
 	background-color: var(--chrome-background-color) !important;
 }
 
-:root:-moz-lwtheme-darktext {
+#main-window:root:-moz-lwtheme-darktext {
 	/*light theme */
 	--tabs-border: #222 !important;
 	--color-overflow: #111 !important;
@@ -35,12 +35,12 @@
 	background-color: var(--chrome-background-color) !important;
 }
 
-:root:not(:-moz-lwtheme-brighttext):-moz-window-inactive {
+#main-window:root:not(:-moz-lwtheme-brighttext):-moz-window-inactive {
 	--color-overflow: -moz-win-accentcolor !important;
 	--chrome-color: -moz-win-accentcolor !important;
 	--chrome-background-color: -moz-win-accentcolortext !important;
 }
 
-:root:-moz-window-inactive:not(:moz-lwtheme-brighttext) {
+#main-window:root:-moz-window-inactive:not(:moz-lwtheme-brighttext) {
 	background-color: rgb(240, 240, 240) !important;
 }
