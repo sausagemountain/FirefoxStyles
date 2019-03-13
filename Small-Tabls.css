@@ -22,7 +22,7 @@
 .tabbrowser-tab[fadein]:not([selected]),
 #tabbrowser-tabs[movingtab] .tabbrowser-tab[selected] {
 	max-width: 0px !important;
-	min-width: 0px !important;
+	min-width: unset !important;
 }
 
 /* add favicons */
