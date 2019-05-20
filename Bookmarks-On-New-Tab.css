@@ -2,10 +2,10 @@
 
 
 #main-window #PersonalToolbar {
-	margin-top: 5px !important;
+	padding-top: 5px !important;
 	visibility: collapse !important;
-	background: inherit !important;
 }
+
 #main-window[title^="about:"] #PersonalToolbar,
 #main-window[title^="New Tab"] #PersonalToolbar,
 #main-window[title^="Nightly"] #PersonalToolbar,

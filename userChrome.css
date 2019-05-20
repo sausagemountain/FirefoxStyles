@@ -1,29 +1,60 @@
-@import url(./Modern-scrollbars.css);
 @import url(./Bookmarks-On-New-Tab.css);
-@import url(./Colorize-Elements.css);
-@import url(./One-Line-UI.css);
-@import url(./Small-Tabls.css);
 
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-
-#pageActionSeparator {
-	display: none !important;
-	visibility: collapse !important;
+toolbar:-moz-window-inactive {
+	background: inherit !important;
 }
 
-/* rounded corner */
-#nav-bar {
-	border-bottom-right-radius: 14px !important;
+#TabsToolbar .tabbrowser-tab .tab-line {
+    display: none !important;
+	 visibility: collapse !important;
 }
 
-/* shrink drag spaces */
-#TabsToolbar .titlebar-spacer[type='pre-tabs'] {
-	width: 35px !important;
-	border: 0 transparent !important;
+#navigator-toolbox #PanelUI-button {
+	-moz-box-ordinal-group: 0 !important;
+	margin-right: 2px;
+	transition: all 350ms var(--animation-easing-function) !important;
+	transition-delay: 0.5s !important;
 }
-#TabsToolbar .titlebar-spacer[type='post-tabs'] {
-	width: 20px !important;
-	border: 0 transparent !important;
+
+#urlbar {
+	border-radius: 15px !important;
 }
+
+#navigator-toolbox {
+	background: transparent !important;
+}
+
+.tabbrowser-tab[fadein]::after,
+.tabbrowser-tab[fadein]::before {
+	opacity: 0.2 !important;
+	transform: scale(1, 0.65);
+}
+
+.titlebar-spacer {
+	border: unset !important;
+	width: 30px !important;
+}
+
+#nav-bar:-moz-window-inactive {
+	box-shadow: 0 0 0 transparent !important;
+}
+
+.tabbrowser-tab[fadein]:not([pinned]) {
+	max-width: unset !important;
+}
+
+.tabbrowser-tab[fadein] .tab-close-button {
+	margin-left: -3px !important;
+	margin-right: 3px !important;
+	-moz-box-ordinal-group: 0 !important;
+	border-radius: 45% !important;
+}
+
+.tabbrowser-tab[fadein]:not([pinned]) .tab-icon-image:not([src]) {
+		display: inline !important;
+		list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.svg") !important;
+}
+

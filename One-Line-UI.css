@@ -21,7 +21,7 @@ Taken from here https://gitlab.com/markonius/my-cool-userchrome from [this](http
 /* Move Tab-bar beside Nav-bar */
 #TabsToolbar {
 	margin-bottom: 0px !important; /* not needed anymore? */
-	margin-top: 0px !important; /*  */
+	margin-top: 0px !important;
 	margin-left: 35vw !important;
 	margin-right: -34px !important;
 	max-height: 32px !important;

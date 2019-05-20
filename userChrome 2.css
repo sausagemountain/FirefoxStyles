@@ -1,0 +1,29 @@
+@import url(./Modern-scrollbars.css);
+@import url(./Bookmarks-On-New-Tab.css);
+@import url(./Colorize-Elements.css);
+@import url(./One-Line-UI.css);
+@import url(./Small-Tabls.css);
+
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+#pageActionSeparator {
+	display: none !important;
+	visibility: collapse !important;
+}
+
+/* rounded corner */
+#nav-bar {
+	border-bottom-right-radius: 14px !important;
+}
+
+/* shrink drag spaces */
+#TabsToolbar .titlebar-spacer[type='pre-tabs'] {
+	width: 35px !important;
+	border: 0 transparent !important;
+}
+#TabsToolbar .titlebar-spacer[type='post-tabs'] {
+	width: 20px !important;
+	border: 0 transparent !important;
+}

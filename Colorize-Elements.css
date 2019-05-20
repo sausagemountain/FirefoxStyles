@@ -7,6 +7,10 @@
 	background-color: var(--chrome-background-color) !important;
 }
 
+#main-window #PersonalToolbar {
+	background: inherit !important;
+}
+
 #nav-bar-overflow-button,
 #nav-bar *.toolbarbutton-1,
 .urlbar-icon,
