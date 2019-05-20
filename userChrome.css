@@ -1,5 +1,5 @@
 @import url(./Bookmarks-On-New-Tab.css);
-
+@import url(./Modern-Scrollbars.css);
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
@@ -8,13 +8,14 @@ toolbar:-moz-window-inactive {
 }
 
 #TabsToolbar .tabbrowser-tab .tab-line {
-    display: none !important;
-	 visibility: collapse !important;
+	display: none !important;
+	visibility: collapse !important;
 }
 
 #navigator-toolbox #PanelUI-button {
 	-moz-box-ordinal-group: 0 !important;
 	margin-right: 2px;
+	margin-left: 25px ;
 	transition: all 350ms var(--animation-easing-function) !important;
 	transition-delay: 0.5s !important;
 }
@@ -35,15 +36,36 @@ toolbar:-moz-window-inactive {
 
 .titlebar-spacer {
 	border: unset !important;
-	width: 30px !important;
+	width: 5px !important;
 }
 
-#nav-bar:-moz-window-inactive {
+#titlebar {
+	-moz-box-ordinal-group: 1 !important;
+}
+
+#TabsToolbar > .titlebar-buttonbox-container {
+	margin-bottom: 32px !important;
+	margin-top: -32px !important;
+}
+
+#TabsToolbar > .toolbar-items {
+	margin-right: -138px;
+}
+
+#nav-bar {
 	box-shadow: 0 0 0 transparent !important;
+	-moz-box-ordinal-group: 0 !important;
+	margin-right: 138px;
+	background: inherit !important;
+	
+}
+
+#nav-bar:not(:-moz-window-inactive) toolbarbutton {
+	fill: -moz-win-accentcolortext !important;
 }
 
 .tabbrowser-tab[fadein]:not([pinned]) {
-	max-width: unset !important;
+	/* max-width: unset !important; */
 }
 
 .tabbrowser-tab[fadein] .tab-close-button {
