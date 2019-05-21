@@ -3,6 +3,25 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+:root {
+    --toolbarbutton-border-radius: 15px !important;
+	--lwt-toolbarbutton-icon-fill: -moz-win-accentcolortext;
+}
+
+:root:-moz-window-inactive {
+	--lwt-toolbarbutton-hover-background: unset;
+	--lwt-toolbarbutton-icon-fill: unset;
+}
+
+:root:not(:-moz-window-inactive) *:hover {
+	--lwt-toolbarbutton-hover-background: black;
+}
+
+:root:not([customizing]) #nav-bar #back-button[disabled="true"],
+:root:not([customizing]) #nav-bar #forward-button[disabled="true"] {
+	display: none;
+}
+
 toolbar:-moz-window-inactive {
 	background: inherit !important;
 }
@@ -14,10 +33,12 @@ toolbar:-moz-window-inactive {
 
 #navigator-toolbox #PanelUI-button {
 	-moz-box-ordinal-group: 0 !important;
-	margin-right: 2px;
-	margin-left: 25px ;
 	transition: all 350ms var(--animation-easing-function) !important;
 	transition-delay: 0.5s !important;
+}
+
+#page-action-buttons {
+	margin-right: 3px !important;
 }
 
 #urlbar {
@@ -57,26 +78,35 @@ toolbar:-moz-window-inactive {
 	-moz-box-ordinal-group: 0 !important;
 	margin-right: 138px;
 	background: inherit !important;
-	
 }
 
 #nav-bar:not(:-moz-window-inactive) toolbarbutton {
-	fill: -moz-win-accentcolortext !important;
+    /* fill: -moz-win-accentcolortext !important; */
 }
 
 .tabbrowser-tab[fadein]:not([pinned]) {
-	/* max-width: unset !important; */
+    max-width: unset !important;
 }
 
 .tabbrowser-tab[fadein] .tab-close-button {
-	margin-left: -3px !important;
-	margin-right: 3px !important;
-	-moz-box-ordinal-group: 0 !important;
-	border-radius: 45% !important;
+    margin-left: -3px !important;
+    margin-right: 3px !important;
+    -moz-box-ordinal-group: 0 !important;
+    border-radius: 45% !important;
 }
 
 .tabbrowser-tab[fadein]:not([pinned]) .tab-icon-image:not([src]) {
-		display: inline !important;
-		list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.svg") !important;
+    display: inline !important;
+    list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.svg") !important;
+}
+
+:root[sizemode="normal"][chromehidden~="menubar"] #TabsToolbar > .toolbar-items,
+:root[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] + #TabsToolbar > .toolbar-items {
+    padding-top: 0px !important;
+}
+
+:root[chromehidden~="menubar"] #navigator-toolbox,
+:root #nav-bar {
+    padding-top: calc(var(--space-above-tabbar) + 1px) !important;
 }
 
