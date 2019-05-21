@@ -3,22 +3,24 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-:root {
+:root #nav-bar *, 
+:root #titlebar * {
     --toolbarbutton-border-radius: 15px !important;
 	--lwt-toolbarbutton-icon-fill: -moz-win-accentcolortext;
 }
 
-:root:-moz-window-inactive {
-	--lwt-toolbarbutton-hover-background: unset;
-	--lwt-toolbarbutton-icon-fill: unset;
+:root:-moz-window-inactive * {
+	--lwt-toolbarbutton-hover-background: unset !important;
+	--lwt-toolbarbutton-icon-fill: unset !important;
 }
 
-:root:not(:-moz-window-inactive) *:hover {
-	--lwt-toolbarbutton-hover-background: black;
+:root:not(:-moz-window-inactive) #nav-bar,
+:root:not(:-moz-window-inactive) #titlebar {
+	--lwt-toolbarbutton-hover-background: rgba(0,0,0,0.6);
 }
 
-:root:not([customizing]) #nav-bar #back-button[disabled="true"],
-:root:not([customizing]) #nav-bar #forward-button[disabled="true"] {
+:root:not([customizing]) #back-button[disabled="true"],
+:root:not([customizing]) #forward-button[disabled="true"] {
 	display: none;
 }
 
@@ -26,12 +28,12 @@ toolbar:-moz-window-inactive {
 	background: inherit !important;
 }
 
-#TabsToolbar .tabbrowser-tab .tab-line {
+.tab-line {
 	display: none !important;
 	visibility: collapse !important;
 }
 
-#navigator-toolbox #PanelUI-button {
+#PanelUI-button {
 	-moz-box-ordinal-group: 0 !important;
 	transition: all 350ms var(--animation-easing-function) !important;
 	transition-delay: 0.5s !important;
@@ -57,7 +59,7 @@ toolbar:-moz-window-inactive {
 
 .titlebar-spacer {
 	border: unset !important;
-	width: 5px !important;
+	width: 0px !important;
 }
 
 #titlebar {
