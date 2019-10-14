@@ -11,6 +11,8 @@
 #main-window[title^="Mozilla Firefox"] #navigator-toolbox #PersonalToolbar,
 #main-window[title^="Firefox Developer Edition"] #navigator-toolbox #PersonalToolbar {
   transform: translateY(0px);
+  transition: transform 0s linear 0s !important;
+  position: unset !important;
 }
 
 :root:not([customizing]) #navigator-toolbox #PersonalToolbar {
