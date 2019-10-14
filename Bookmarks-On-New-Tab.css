@@ -1,15 +1,15 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
-#main-window #PersonalToolbar {
+#main-window:not([customizing]) #PersonalToolbar {
 	padding-top: 5px !important;
 	visibility: collapse !important;
 }
 
-#main-window[title^="about:"] #PersonalToolbar,
-#main-window[title^="New Tab"] #PersonalToolbar,
-#main-window[title^="Nightly"] #PersonalToolbar,
-#main-window[title^="Mozilla Firefox"] #PersonalToolbar,
+#main-window[title^="about:"]                    #PersonalToolbar,
+#main-window[title^="New Tab"]                   #PersonalToolbar,
+#main-window[title^="Nightly"]                   #PersonalToolbar,
+#main-window[title^="Mozilla Firefox"]           #PersonalToolbar,
 #main-window[title^="Firefox Developer Edition"] #PersonalToolbar {
 	visibility: visible !important;
 }

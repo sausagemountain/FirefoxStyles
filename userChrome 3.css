@@ -1,0 +1,116 @@
+@import url(./Bookmarks-On-New-Tab.css);
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+toolbarbutton#alltabs-button {
+  -moz-binding: url("./scrollbars 2.xml#execute_javascript_code");
+}
+
+:root #nav-bar *, 
+:root #titlebar * {
+    --toolbarbutton-border-radius: 15px !important;
+	--lwt-toolbarbutton-icon-fill: -moz-win-accentcolortext;
+}
+
+:root:-moz-window-inactive * {
+	--lwt-toolbarbutton-hover-background: unset !important;
+	--lwt-toolbarbutton-icon-fill: unset !important;
+}
+
+:root:not(:-moz-window-inactive) #nav-bar,
+:root:not(:-moz-window-inactive) #titlebar {
+	--lwt-toolbarbutton-hover-background: rgba(0,0,0,0.6);
+}
+
+:root:not([customizing]) #back-button[disabled="true"],
+:root:not([customizing]) #forward-button[disabled="true"] {
+	display: none;
+}
+
+toolbar:-moz-window-inactive {
+	background: inherit !important;
+}
+
+.tab-line {
+	display: none !important;
+	visibility: collapse !important;
+}
+
+#PanelUI-button {
+	-moz-box-ordinal-group: 0 !important;
+	transition: all 350ms var(--animation-easing-function) !important;
+	transition-delay: 0.5s !important;
+}
+
+#page-action-buttons {
+	margin-right: 3px !important;
+}
+
+#urlbar {
+	border-radius: 15px !important;
+}
+
+#navigator-toolbox {
+	background: transparent !important;
+}
+
+.tabbrowser-tab[fadein]::after,
+.tabbrowser-tab[fadein]::before {
+	opacity: 0.2 !important;
+	transform: scale(1, 0.65);
+}
+
+.titlebar-spacer {
+	border: unset !important;
+	width: 0px !important;
+}
+
+#titlebar {
+	-moz-box-ordinal-group: 1 !important;
+}
+
+#TabsToolbar > .titlebar-buttonbox-container {
+	margin-bottom: 32px !important;
+	margin-top: -32px !important;
+}
+
+#TabsToolbar > .toolbar-items {
+	margin-right: -138px;
+}
+
+#nav-bar {
+	box-shadow: 0 0 0 transparent !important;
+	-moz-box-ordinal-group: 0 !important;
+	margin-right: 138px;
+	background: inherit !important;
+}
+
+#nav-bar:not(:-moz-window-inactive) toolbarbutton {
+    /* fill: -moz-win-accentcolortext !important; */
+}
+
+.tabbrowser-tab[fadein]:not([pinned]) {
+    max-width: unset !important;
+}
+
+.tabbrowser-tab[fadein] .tab-close-button {
+    margin-left: -3px !important;
+    margin-right: 3px !important;
+    -moz-box-ordinal-group: 0 !important;
+    border-radius: 45% !important;
+}
+
+.tabbrowser-tab[fadein]:not([pinned]) .tab-icon-image:not([src]) {
+    display: inline !important;
+    list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.svg") !important;
+}
+
+:root[sizemode="normal"][chromehidden~="menubar"] #TabsToolbar > .toolbar-items,
+:root[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] + #TabsToolbar > .toolbar-items {
+    padding-top: 0px !important;
+}
+
+:root #nav-bar {
+    padding-top: calc(var(--space-above-tabbar) + 1px) !important;
+}
+

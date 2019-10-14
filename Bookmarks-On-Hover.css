@@ -1,0 +1,35 @@
+@namespace html url("http://www.w3.org/1999/xhtml");
+@namespace svg url("http://www.w3.org/2000/svg");
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Pop-up bookmarks toolbar */
+
+
+:root[title^="about:"] #navigator-toolbox #PersonalToolbar,
+:root[title^="New Tab"] #navigator-toolbox #PersonalToolbar,
+:root[title^="Nightly"] #navigator-toolbox #PersonalToolbar,
+:root[title^="Mozilla Firefox"] #navigator-toolbox #PersonalToolbar,
+:root[title^="Firefox Developer Edition"] #navigator-toolbox #PersonalToolbar {
+  transform: translateY(0px);
+}
+
+:root:not([customizing]) #navigator-toolbox #PersonalToolbar {
+  z-index: 98;
+  position: absolute;
+  display: block;
+  width: 100%;
+  transform: translateY(-22px);
+  transition: transform 0.25s ease-in 1s !important;
+}
+
+#titlebar, 
+#nav-bar {
+  position: relative;
+  z-index: 99;
+}
+:root:not([customizing]) #navigator-toolbox #PersonalToolbar {
+}
+:root:not([customizing]) #navigator-toolbox:hover #PersonalToolbar {
+  transition: transform 0.25s ease-out 0.25s !important;
+  transform: translateY(0);
+}
