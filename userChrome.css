@@ -66,4 +66,5 @@
 .tabbrowser-tab .tab-close-button {
   margin-left: -2px !important;
   margin-right: 4px !important;
+  border-radius: 45% !important;
 }
