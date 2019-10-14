@@ -46,11 +46,20 @@
 
 /* Replace favicon on tabs with close button on hover */
 
-.tabbrowser-tab:not(:hover) .tab-close-button{ display:none; }
-.tabbrowser-tab:not([pinned]):hover .tab-close-button{ display:block !important; }
+.tabbrowser-tab:not(:hover) .tab-close-button{
+  display:none;
+}
+.tabbrowser-tab:not([pinned]):hover .tab-close-button{
+  display:block !important;
+}
 
 
-.tabbrowser-tab:not([pinned]):hover  .tab-icon-image {
+.tabbrowser-tab[fadein]:not([pinned]):not(:hover) .tab-icon-image:not([src]) {
+    display: inline !important;
+    list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.svg") !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-icon-image {
   display: none !important;
 }
 
