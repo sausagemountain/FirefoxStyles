@@ -6,6 +6,8 @@
 
 
 #main-window[title^="about:"] #navigator-toolbox #PersonalToolbar,
+#main-window[title^="Options"] #navigator-toolbox #PersonalToolbar,
+#main-window[title^="Add-ons Manager"] #navigator-toolbox #PersonalToolbar,
 #main-window[title^="New Tab"] #navigator-toolbox #PersonalToolbar,
 #main-window[title^="Nightly"] #navigator-toolbox #PersonalToolbar,
 #main-window[title^="Mozilla Firefox"] #navigator-toolbox #PersonalToolbar,
