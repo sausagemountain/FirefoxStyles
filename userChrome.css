@@ -20,8 +20,20 @@
 	transition-delay: 0.5s !important;
 }
 
-#urlbar {
-	border-radius: 15px !important;
+#urlbar,
+.megabar #urlbar-input-container,
+.megabar #urlbar-background {
+	border-radius: 20px !important;
+	backdrop-filter: blur(50px);
+	background-color: rgba(255, 255, 255, 0.7) !important;
+	background-clip: content-box !important;
+}
+
+.urlbarView-row {
+	border-radius: 20px !important;
+}
+
+.megabar #urlbar-background  {
 }
 
 #page-action-buttons {
