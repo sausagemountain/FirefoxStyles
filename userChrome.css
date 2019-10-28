@@ -59,20 +59,33 @@
 /* Replace favicon on tabs with close button on hover */
 
 .tabbrowser-tab:not(:hover) .tab-close-button{
-  display:none;
+  display: none;
 }
 .tabbrowser-tab:not([pinned]):hover .tab-close-button{
-  display:block !important;
+  display: block !important;
 }
-
-
-.tabbrowser-tab[fadein]:not([pinned]):not(:hover) .tab-icon-image:not([src]) {
-    display: inline !important;
-    list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.svg") !important;
+.tabbrowser-tab[fadein]:not([pinned]):not([busy]):not([busting]):not([progress]):not(:hover) .tab-icon-image:not([src]) {
+    display: initial !important;
 }
-
-.tabbrowser-tab:not([pinned]):hover .tab-icon-image {
+.tabbrowser-tab:not([pinned]):hover .tab-icon-image,
+.tabbrowser-tab:not([pinned]):hover .tab-throbber,
+.tabbrowser-tab:not([pinned]) .tab-icon-pending{
   display: none !important;
+}
+
+.tabbrowser-tab[fadein] .tab-background {
+	transition: visibility 1ms ease-in-out 25ms, border-radius .3s linear 0ms !important;
+}
+
+.tabbrowser-tab[fadein] .tab-background[selected] {
+	border-radius: 10px 10px 0px 0px !important;
+}
+
+.titlebar-button {
+	width: 10px !important;
+	height: 0px !important;
+	padding: 0px 10px !important;
+	margin: 0px !important;
 }
 
 .tabbrowser-tab:hover  .tab-throbber,
