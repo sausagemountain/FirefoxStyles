@@ -74,7 +74,7 @@
 }
 
 .tabbrowser-tab[fadein] .tab-background {
-	transition: visibility 1ms ease-in-out 25ms, border-radius .3s linear 0ms !important;
+	transition: visibility 1ms ease-in-out 25ms, all .3s ease-in-out 0s !important;
 }
 
 .tabbrowser-tab[fadein] .tab-background[selected] {
@@ -102,3 +102,20 @@
   margin-right: 4px !important;
   border-radius: 45% !important;
 }
+.tab-background {
+	border-top-color: transparent !important;
+}
+
+#toolbar-menubar,
+.titlebar-buttonbox-container {
+	transition: all .2s ease-in-out 0s;
+}
+
+
+
+
+
+
+
+
+
