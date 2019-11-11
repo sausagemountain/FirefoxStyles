@@ -13,14 +13,14 @@
 #main-window[title^="Mozilla Firefox"] #navigator-toolbox #PersonalToolbar,
 #main-window[title^="Firefox Developer Edition"] #navigator-toolbox #PersonalToolbar {
   transform: translateY(0px);
-  transition: transform 0s linear 0s !important;
+  transition: transform 0s linear 0s, position 0s linear 0s !important;
   position: unset !important;
 }
 
 :root:not([customizing]) #navigator-toolbox #PersonalToolbar {
   z-index: 98;
   position: absolute;
-  display: block;
+  /* display: block; */
   width: 100%;
   transform: translateY(-22px);
   transition: transform 0.25s ease-in 1s !important;
