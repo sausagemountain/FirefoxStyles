@@ -20,7 +20,7 @@
 :root:not([customizing]) #navigator-toolbox #PersonalToolbar {
   z-index: 98;
   position: absolute;
-  /* display: block; */
+  display: block;
   width: 100%;
   transform: translateY(-22px);
   transition: transform 0.25s ease-in 1s !important;
