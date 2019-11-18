@@ -74,7 +74,7 @@
 }
 
 .tabbrowser-tab[fadein] .tab-background {
-	transition: visibility 1ms ease-in-out 25ms, all .3s ease-in-out 0s !important;
+	transition: all .5s ease-in-out 25ms, visibility 0s ease-in-out 25ms !important;
 }
 
 .tabbrowser-tab[fadein] .tab-background[selected] {
