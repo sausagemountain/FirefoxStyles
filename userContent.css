@@ -1,0 +1,7 @@
+html {
+  scrollbar-width: thin;
+}
+
+* {
+  scrollbar-width: inherit;
+}
