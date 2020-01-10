@@ -4,9 +4,10 @@
 @namespace svg url("http://www.w3.org/2000/svg");
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-:root:not([customizing]) #back-button[disabled="true"],
-:root:not([customizing]) #forward-button[disabled="true"] {
-	display: none;
+#nav-bar:not([customizing='true']) #back-button[disabled="true"],
+#nav-bar:not([customizing='true']) #forward-button[disabled="true"] {
+	display: none !important;
+	
 }
 
 .tab-line {

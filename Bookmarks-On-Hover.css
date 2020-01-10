@@ -4,36 +4,26 @@
 
 /* Pop-up bookmarks toolbar */
 
-
-#main-window[title^="about:"] #navigator-toolbox #PersonalToolbar,
-#main-window[title^="Options"] #navigator-toolbox #PersonalToolbar,
-#main-window[title^="Add-ons Manager"] #navigator-toolbox #PersonalToolbar,
-#main-window[title^="New Tab"] #navigator-toolbox #PersonalToolbar,
-#main-window[title^="Nightly"] #navigator-toolbox #PersonalToolbar,
-#main-window[title^="Mozilla Firefox"] #navigator-toolbox #PersonalToolbar,
-#main-window[title^="Firefox Developer Edition"] #navigator-toolbox #PersonalToolbar {
-  transform: translateY(0px);
-  transition: transform 0s linear 0s, position 0s linear 0s !important;
-  position: unset !important;
-}
-
-:root:not([customizing]) #navigator-toolbox #PersonalToolbar {
-  z-index: 98;
-  position: absolute;
-  display: block;
+#navigator-toolbox #PersonalToolbar:not([customizing]) {
+  position: fixed;
+  display: flex;
   width: 100%;
-  transform: translateY(-22px);
-  transition: transform 0.25s ease-in 1s !important;
+  transition: min-height 170ms ease-out, 
+    max-height 170ms ease-out, 
+    background-color 0.1s cubic-bezier(.17,.67,.83,.67), 
+    transform 0.3s linear 1s !important;
+  transform: translateY(calc(-100% - 1px));
+  z-index: 98;
 }
 
-#titlebar, 
-#nav-bar {
-  position: relative;
-  z-index: 99;
+#TabsToolbar, #nav-bar {
+    z-index: 99;
 }
-:root:not([customizing]) #navigator-toolbox #PersonalToolbar {
-}
-:root:not([customizing]) #navigator-toolbox:hover #PersonalToolbar {
-  transition: transform 0.25s ease-out 0.25s !important;
+
+#navigator-toolbox:hover #PersonalToolbar:not([customizing]) {
   transform: translateY(0);
+  transition: min-height 170ms ease-out, 
+    max-height 170ms ease-out, 
+    background-color 0.1s cubic-bezier(.17,.67,.83,.67), 
+    transform 0.1s linear 0.1s !important;
 }
