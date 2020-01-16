@@ -13,11 +13,11 @@
     background-color 0.1s cubic-bezier(.17,.67,.83,.67), 
     transform 0.3s linear 1s !important;
   transform: translateY(calc(-100% - 1px));
-  z-index: 98;
+  z-index: 90;
 }
 
 #TabsToolbar, #nav-bar {
-    z-index: 99;
+    z-index: 100;
 }
 
 #navigator-toolbox:hover #PersonalToolbar:not([customizing]) {
