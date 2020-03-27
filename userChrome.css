@@ -4,52 +4,11 @@
 @namespace svg url("http://www.w3.org/2000/svg");
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-:root {
-  --sidebar-min-width: 32px;
-  --sidebar-visible-width: 300px;
-}
-
 /* hide back/forward when cannot go */
 
 #nav-bar:not([customizing='true']) #back-button[disabled="true"],
 #nav-bar:not([customizing='true']) #forward-button[disabled="true"] {
 	display: none !important;
-}
-
-/* animated menu bar flyout */
-
-#toolbar-menubar{
-	transition: all .2s ease-in-out .1s;
-}
-
-/* hide tab bar */
-
-#nav-bar {
-	margin-top: -31px;
-}
-#TabsToolbar {
-	visibility: hidden;
-}
-
-/* collapse sidebar on hover, mostly for Sidebery */
-
-#sidebar-header {
-  visibility: collapse;
-}
-#sidebar, 
-#sidebar-box {
-	position: relative;
-  max-width: var(--sidebar-min-width, 32px) !important;
-  min-width: var(--sidebar-min-width, 32px) !important;
-	transition: all .15s linear .5s;
-  z-index: 5;
-}
-#sidebar-box:hover, 
-#sidebar-box:hover #sidebar {
-  max-width: var(--sidebar-visible-width, 250px) !important;
-  min-width: var(--sidebar-visible-width, 250px) !important;
-	margin-right: calc((var(--sidebar-visible-width, 250px) - var(--sidebar-min-width, 32px)) * -1) !important;
-	transition: all .3s ease-in-out .1s;
 }
 
 /* hamburger button on the left */
@@ -127,7 +86,7 @@
 .tabbrowser-tab .tab-close-button {
   margin-left: -2px !important;
   margin-right: 4px !important;
-  border-radius: 45% !important;
+  border-radius: 40% !important;
 }
 .tab-background {
 	border-top-color: transparent !important;
