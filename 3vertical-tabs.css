@@ -1,0 +1,29 @@
+@namespace html url("http://www.w3.org/1999/xhtml");
+@namespace svg url("http://www.w3.org/2000/svg");
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Vertical tabs */
+
+#browser {
+  padding-left: 40px;
+}
+
+#TabsToolbar {
+  width: calc(100vh - 32px) !important;
+  position: fixed !important;
+  height: 30px !important;
+  z-index: 10 !important;
+  top: 32px !important; 
+  left: 40px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+}
+
+
+#nav-bar {
+  margin-left: 80px;
+  background: black !important;
+  width: calc(100% - 80px) !important;
+}
