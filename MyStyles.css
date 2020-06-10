@@ -1,8 +1,12 @@
-@import url(./Bookmarks-On-Hover.css);
-
 @namespace html url("http://www.w3.org/1999/xhtml");
 @namespace svg url("http://www.w3.org/2000/svg");
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* thin scrollbars */
+
+* {
+  scrollbar-width: thin;
+}
 
 /* hide back/forward when cannot go */
 

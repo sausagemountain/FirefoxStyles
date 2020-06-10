@@ -1,7 +1,5 @@
-html {
-  scrollbar-width: thin;
-}
+/* thin scrollbars */
 
 * {
-  scrollbar-width: inherit;
+  scrollbar-width: thin;
 }
