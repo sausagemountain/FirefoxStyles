@@ -23,25 +23,64 @@
 	transition-delay: 0.5s !important;
 }
 
-/* rounded corners on url bar */
-
-#urlbar-container,
-#urlbar,
-#urlbar-input,
-#urlbar-input-container,
+/* rounded corners on things */
+.panel-arrowcontent,
 #urlbar-background {
-	border-radius: 20px !important;
-	backdrop-filter: blur(50px) !important;;
-	background-color: rgba(255, 255, 255, 0.7) !important;
+	border-radius: 9px !important;
+}
+
+#urlbar[focused=true] #urlbar-background {
+	border-radius: 13px !important;
+	backdrop-filter: blur(10px) !important;
+	background-color: rgba(255, 255, 255, 0.4) !important;
 	background-clip: content-box !important;
 }
+
+toolbarbutton.toolbarbutton-1 .toolbarbutton-icon, .toolbarbutton-badge-stack, .tab-close-button {
+	border-radius: 35% !important;
+}
+
+.bookmark-item .toolbarbutton-icon, .tab-icon-image {
+	border-radius: 25% !important;
+}
+
+.bookmark-item {
+  padding: 3px  6px !important;
+  border-radius: 8px !important;
+}
+
+/* move things from url bar corners */
 
 #page-action-buttons {
 	margin-right: 3px !important;
 }
 
+#tracking-protection-icon-container, #identity-box {
+	margin-left: 3px !important;
+}
+
+/* center things */
+
+#urlbar:not([focused]) .urlbar-input-box {
+	text-align: center !important;
+}
+
+.urlbar-input-box {
+	transition: all ease-in-out 100ms;
+}
+
+#personal-bookmarks {
+	width: 100% !important;
+}
+
+#PlacesToolbarItems {
+	-moz-box-pack: center !important;
+}
+
+/* do not remember */
+
 #nav-bar {
-  box-shadow: unset !important;
+	box-shadow: none !important;
 }
 
 /* nicer tab separators */
@@ -58,6 +97,17 @@
 	width: 20px !important;
 }
 
+/* remove active tab line */
+
+.tab-background {
+	border-top-color: transparent !important;
+}
+
+.tab-line {
+	display: none !important;
+	visibility: collapse !important;
+}
+
 /* Replace favicon on tabs with close button on hover */
 
 .tabbrowser-tab:not(:hover) .tab-close-button{
@@ -67,7 +117,7 @@
   display: block !important;
 }
 .tabbrowser-tab[fadein]:not([pinned]):not([busy]):not([busting]):not([progress]):not(:hover) .tab-icon-image:not([src]) {
-    display: initial !important;
+  display: initial !important;
 }
 .tabbrowser-tab:not([pinned]):hover .tab-icon-image,
 .tabbrowser-tab:not([pinned]):hover .tab-throbber,
@@ -87,13 +137,4 @@
 .tabbrowser-tab .tab-close-button {
   margin-left: -2px !important;
   margin-right: 4px !important;
-  border-radius: 40% !important;
-}
-.tab-background {
-	border-top-color: transparent !important;
-}
-
-.tab-line {
-	display: none !important;
-	visibility: collapse !important;
 }
