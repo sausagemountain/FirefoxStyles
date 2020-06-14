@@ -31,8 +31,8 @@
 
 #urlbar[focused=true] #urlbar-background {
 	border-radius: 13px !important;
-	backdrop-filter: blur(10px) !important;
-	background-color: rgba(255, 255, 255, 0.4) !important;
+	/*backdrop-filter: blur(10px) !important;*/
+	background-color: rgba(255, 255, 255, 0.95) !important;
 	background-clip: content-box !important;
 }
 
@@ -62,11 +62,7 @@ toolbarbutton.toolbarbutton-1 .toolbarbutton-icon, .toolbarbutton-badge-stack, .
 /* center things */
 
 #urlbar:not([focused]) .urlbar-input-box {
-	text-align: center !important;
-}
-
-.urlbar-input-box {
-	transition: all ease-in-out 100ms;
+	/*text-align: center !important;*/
 }
 
 #personal-bookmarks {
