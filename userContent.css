@@ -3,3 +3,8 @@
 * {
   scrollbar-width: thin;
 }
+
+style, script {
+  visibility: collapse !important;
+  display: none !important;
+}

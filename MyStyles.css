@@ -26,14 +26,7 @@
 /* rounded corners on things */
 .panel-arrowcontent,
 #urlbar-background {
-	border-radius: 9px !important;
-}
-
-#urlbar[focused=true] #urlbar-background {
-	border-radius: 13px !important;
-	/*backdrop-filter: blur(10px) !important;*/
-	background-color: rgba(255, 255, 255, 0.95) !important;
-	background-clip: content-box !important;
+	border-radius: 10px !important;
 }
 
 toolbarbutton.toolbarbutton-1 .toolbarbutton-icon, .toolbarbutton-badge-stack, .tab-close-button {
@@ -49,6 +42,14 @@ toolbarbutton.toolbarbutton-1 .toolbarbutton-icon, .toolbarbutton-badge-stack, .
   border-radius: 8px !important;
 }
 
+/* slightly transparent url bar */
+#urlbar[focused=true] #urlbar-background {
+	border-radius: 13px !important;
+	/*backdrop-filter: blur(10px) !important;*/
+	background-color: rgba(255, 255, 255, 0.95) !important;
+	background-clip: content-box !important;
+}
+
 /* move things from url bar corners */
 
 #page-action-buttons {
@@ -59,11 +60,7 @@ toolbarbutton.toolbarbutton-1 .toolbarbutton-icon, .toolbarbutton-badge-stack, .
 	margin-left: 3px !important;
 }
 
-/* center things */
-
-#urlbar:not([focused]) .urlbar-input-box {
-	/*text-align: center !important;*/
-}
+/* center bookmarks */
 
 #personal-bookmarks {
 	width: 100% !important;
@@ -79,58 +76,67 @@ toolbarbutton.toolbarbutton-1 .toolbarbutton-icon, .toolbarbutton-badge-stack, .
 	box-shadow: none !important;
 }
 
-/* nicer tab separators */
+/* display default favicon if no favicon found */
 
-.tabbrowser-tab[fadein]::after,
-.tabbrowser-tab[fadein]::before {
-	opacity: 0.2 !important;
-	transform: scale(1, 0.65);
-}
-
-.titlebar-spacer[type="pre-tabs"],
-.titlebar-spacer[type="post-tabs"] {
-	border: unset !important;
-	width: 20px !important;
-}
-
-/* remove active tab line */
-
-.tab-background {
-	border-top-color: transparent !important;
-}
-
-.tab-line {
-	display: none !important;
-	visibility: collapse !important;
+.tabbrowser-tab[fadein]:not([pinned]):not([busy]):not([busting]):not([progress]):not(:hover) .tab-icon-image:not([src]) {
+  display: initial !important;
 }
 
 /* Replace favicon on tabs with close button on hover */
 
-.tabbrowser-tab:not(:hover) .tab-close-button{
-  display: none;
-}
-.tabbrowser-tab:not([pinned]):hover .tab-close-button{
-  display: block !important;
-}
-.tabbrowser-tab[fadein]:not([pinned]):not([busy]):not([busting]):not([progress]):not(:hover) .tab-icon-image:not([src]) {
-  display: initial !important;
-}
-.tabbrowser-tab:not([pinned]):hover .tab-icon-image,
-.tabbrowser-tab:not([pinned]):hover .tab-throbber,
-.tabbrowser-tab:not([pinned]) .tab-icon-pending{
+.tabbrowser-tab[fadein]:not([pinned]):not(:hover) .tab-close-button {
   display: none !important;
 }
 
-.tabbrowser-tab:hover  .tab-throbber,
-.tabbrowser-tab:hover  .tab-icon-image,
-.tabbrowser-tab:hover .tab-sharing-icon-overlay,
-.tabbrowser-tab:hover  .tab-icon-overlay,
-.tabbrowser-tab:hover  .tab-label-container,
-.tabbrowser-tab:hover  .tab-icon-sound {
-  -moz-box-ordinal-group: 2 !important;
+.tabbrowser-tab[fadein]:not([pinned]):hover .tab-close-button {
+  display: block !important;
+  -moz-box-ordinal-group: 0 !important;
 }
 
-.tabbrowser-tab .tab-close-button {
-  margin-left: -2px !important;
-  margin-right: 4px !important;
+.tabbrowser-tab[fadein]:not([pinned]):hover .tab-icon-stack {
+	display: none !important;
+}
+
+.tabbrowser-tab[fadein]:not([pinned]) .tab-close-button {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.tabbrowser-tab[fadein] .tab-secondary-label {
+	display: none !important;
+}
+
+.titlebar-buttonbox-container,
+.titlebar-buttonbox.titlebar-color {
+	min-height: 1px !important;
+}
+
+/* Compact UI */
+
+.titlebar-spacer {
+	width: 0px !important;
+}
+
+tab {
+	min-width: 1px !important;
+	padding: 0px !important;
+	min-height: 29px !important;
+}
+
+#nav-bar, #nav-bar-customization-target, #urlbar-container, #urlbar, #urlbar-input-container, .toolbarbutton-1 {
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+#appMenu-popup .subviewbutton {
+	margin: 2px 0px 2px 0px !important;
+	padding: 2px 8px 2px 8px !important;
+}
+
+#appMenu-popup toolbarseparator,
+.panel-subview-body,
+.proton-zap {
+	min-height: 0px !important;
+	margin: 0px !important;
+	padding: 0px !important;
 }
