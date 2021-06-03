@@ -38,26 +38,16 @@ toolbarbutton.toolbarbutton-1 .toolbarbutton-icon, .toolbarbutton-badge-stack, .
 }
 
 .bookmark-item {
-  padding: 3px  6px !important;
+  padding: 3px 6px !important;
   border-radius: 8px !important;
 }
 
 /* slightly transparent url bar */
 #urlbar[focused=true] #urlbar-background {
 	border-radius: 13px !important;
-	/*backdrop-filter: blur(10px) !important;*/
+/* 	backdrop-filter: blur(10px) !important; */
 	background-color: rgba(255, 255, 255, 0.95) !important;
 	background-clip: content-box !important;
-}
-
-/* move things from url bar corners */
-
-#page-action-buttons {
-	margin-right: 3px !important;
-}
-
-#tracking-protection-icon-container, #identity-box {
-	margin-left: 3px !important;
 }
 
 /* center bookmarks */
@@ -98,7 +88,7 @@ toolbarbutton.toolbarbutton-1 .toolbarbutton-icon, .toolbarbutton-badge-stack, .
 }
 
 .tabbrowser-tab[fadein]:not([pinned]) .tab-close-button {
-  margin-left: 0px !important;
+  margin-left: -2.5px !important;
   margin-right: 0px !important;
 }
 
@@ -106,37 +96,59 @@ toolbarbutton.toolbarbutton-1 .toolbarbutton-icon, .toolbarbutton-badge-stack, .
 	display: none !important;
 }
 
+/* Compact tabbar */
+
 .titlebar-buttonbox-container,
 .titlebar-buttonbox.titlebar-color {
 	min-height: 1px !important;
 }
 
-/* Compact UI */
-
 .titlebar-spacer {
 	width: 0px !important;
 }
 
-tab {
-	min-width: 1px !important;
-	padding: 0px !important;
-	min-height: 29px !important;
+* {
+	--tab-min-height: 29px !important;
+	--tab-min-width: 60px !important;
+	--inline-tab-padding: 4px !important;
 }
 
-#nav-bar, #nav-bar-customization-target, #urlbar-container, #urlbar, #urlbar-input-container, .toolbarbutton-1 {
+.tabbrowser-tab[fadein] .tab-background {
+	margin: 1px 0px !important;
+}
+
+/* compact url bar */
+
+#urlbar {
 	padding: 0px !important;
 	margin: 0px !important;
 }
 
-#appMenu-popup .subviewbutton {
-	margin: 2px 0px 2px 0px !important;
-	padding: 2px 8px 2px 8px !important;
+
+* {
+	--urlbar-height: 28px !important;
+	--urlbar-toolbar-height: 28px !important;
+	--urlbar-container-height: 28px !important;
+	--urlbar-icon-padding: 2px !important;
+	--urlbar-min-height: 26px !important;
+	
+	--toolbarbutton-inner-padding: 2px !important;
+	--toolbarbutton-outer-padding: 2px !important;
 }
 
-#appMenu-popup toolbarseparator,
+/* compact menus */
+
+#appMenu-popup #appMenu-fxa-status2,
+.panel-viewstack toolbarseparator,
+.panel-viewstack,
 .panel-subview-body,
 .proton-zap {
-	min-height: 0px !important;
-	margin: 0px !important;
 	padding: 0px !important;
+	margin: 0px !important;
+}
+
+.panel-viewstack .subviewbutton,
+.panel-viewstack .toolbarbutton-1 {
+	margin: 2px 0px 2px 0px !important;
+	padding: 2px 8px 2px 8px !important;
 }
