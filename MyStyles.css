@@ -113,7 +113,7 @@ toolbarbutton.toolbarbutton-1 .toolbarbutton-icon, .toolbarbutton-badge-stack, .
 	--inline-tab-padding: 4px !important;
 }
 
-.tabbrowser-tab[fadein] .tab-background {
+.tab-background {
 	margin: 1px 0px !important;
 }
 
@@ -131,7 +131,7 @@ toolbarbutton.toolbarbutton-1 .toolbarbutton-icon, .toolbarbutton-badge-stack, .
 	--urlbar-container-height: 28px !important;
 	--urlbar-icon-padding: 2px !important;
 	--urlbar-min-height: 26px !important;
-	
+
 	--toolbarbutton-inner-padding: 2px !important;
 	--toolbarbutton-outer-padding: 2px !important;
 }
